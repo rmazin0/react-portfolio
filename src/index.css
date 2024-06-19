@@ -54,7 +54,7 @@
     --secondary-900: #241d0f;
     --secondary-950: #120e07;
     
-    --accent-50: #f9f4ec;
+    --accent-50: #fdefd8;
     --accent-100: #f3e9d8;
     --accent-200: #e7d4b1;
     --accent-300: #dabe8b;
@@ -106,7 +106,7 @@
     
     --secondary-50: #120e07;
     --secondary-100: #241d0f;
-    --secondary-200: #48391e;
+    --secondary-200: #332914;
     --secondary-300: #6d562c;
     --secondary-400: #91733b;
     --secondary-500: #b5904a;
@@ -128,6 +128,15 @@
     --accent-900: #f3e9d8;
     --accent-950: #f9f4ec;
     
+  }
+}
+
+@layer components {
+  .input{
+    @apply border rounded px-2 py-1
+  }
+  .button {
+    @apply border rounded-full mt-3 px-2 py-1
   }
 }
 
