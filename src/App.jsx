@@ -5,7 +5,7 @@ import { useState } from "react"
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  
+
   const handleDarkMode = () => {
     setDarkMode(current => !current)
   }
@@ -13,15 +13,19 @@ function App() {
 
   return (
     <>
-    <div className={`${darkMode&& 'dark'} bg-background-50`}>
-      <Nav onDarkMode={handleDarkMode} dark={darkMode}/>
-      <div className="h-screen flex justify-center items-center">
-        <Hero/>
+      <svg className="hidden">
+        <filter id="texture">
+          <feTurbulence
+            type='turbulence'
+            baseFrequency='0.5'
+          />
+        </filter>
+      </svg>
+      <div className={`${darkMode && 'dark'} bg-background-50`}>
+        <Nav onDarkMode={handleDarkMode} dark={darkMode} />
+        <Hero />
+        <Contact />
       </div>
-      <div className="text-text-900 font-heading flex items-center justify-around bg-secondary-200 py-20">
-        <Contact/>
-      </div>
-    </div>
     </>
   )
 }

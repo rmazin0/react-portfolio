@@ -71,6 +71,7 @@ export default {
         900: 'var(--accent-900)',
         950: 'var(--accent-950)',
       },
+      transparent: 'transparent'
     },
     fontSize: {
       sm: '0.707rem',
@@ -89,7 +90,12 @@ export default {
       normal: '400',
       bold: '700',
     },
-    extend: {},
+    extend: {
+      filter: [
+        'url(#texture)',
+      ],
+
+    },
   },
   plugins: [],
 }
