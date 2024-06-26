@@ -1,24 +1,27 @@
-import { useState } from 'react'
+import { motion } from "framer-motion";
 
 const Contact = (props) => {
+    const {contentRef} = props
+
     return (
         <>
-            <div className='text-text-900 font-heading flex items-center justify-around bg-secondary-200 py-20'>
-                <div className='text-4xl'>
+            <div className='font-heading flex flex-col items-center justify-around py-20' ref={contentRef}>
+                <div className='text-[4rem]'>
                     Let's get in touch!
                 </div>
-                <form className='text-base flex flex-col w-5/12'>
-                    <label>Your Name:</label>
-                    <input className="input"
+                <form className='text-base flex flex-col w-[90%] bg-background-100 p-[50px] rounded-2xl'>
+                    <label className="font-bold ">Your Name:</label>
+                    <input 
+                        className="input"
                         type="text"
                         placeholder='John Doe' />
-                    <label>Email:</label>
+                    <label className="font-bold">Email:</label>
                     <input className='input'
                         type="email"
                         placeholder='johndoe@email.com'/>
-                    <label>Message:</label>
+                    <label className="font-bold">Message:</label>
                     <textarea className='input' rows="4" placeholder='Share your thoughts...'></textarea>
-                    <button className="button-600" >Submit</button>
+                    <button className="contact-btn relative overflow-hidden transition-[0.6] text-2xl" id="contact-btn">Submit</button>
                 </form>
             </div>
         </>
